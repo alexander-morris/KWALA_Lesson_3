@@ -1,4 +1,4 @@
-import generateComment from '../src/gemini/index.js';
+import {generateComment} from '../src/gemini/index.js';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -60,6 +60,12 @@ let replyStyle = {
     "length" : "short",
     "grammar" : "casual",
     "format" : "paragraph"
+}
+
+let context = {
+    "postToReplyTo": blueSkyData.postToReplyTo,
+    "otherPosts": blueSkyData.otherPosts,
+    "replyStyle": replyStyle
 }
 
 let apiKey = process.env.GEMINI_API_KEY;

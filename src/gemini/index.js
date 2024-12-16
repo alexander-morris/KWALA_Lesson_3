@@ -32,7 +32,4 @@ async function generateComment(context, apiKey) {
     }
 }
 
-
-module.exports = {
-    generateComment
-};
+export { generateComment };
